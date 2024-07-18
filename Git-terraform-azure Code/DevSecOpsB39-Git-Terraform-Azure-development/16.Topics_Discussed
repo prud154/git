@@ -1,0 +1,23 @@
+0. Understanding Providers like Azure, AWS, Mongo
+1. Declaring Variables
+2. Implicit Dependency
+3. variables vs tfvars files
+4. Passing variables as CLI Arguments.
+5. Understanding statefile.
+6. Random Password Generator.
+7. Variable Presendence.
+    Environment variables, if present.
+    The terraform.tfvars file, if present.
+    The terraform.tfvars.json file, if present.
+    Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
+    Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
+
+8. Terraform state related commands
+   terraform state list
+
+9. Moving statefile to central location - Azure Storage Account.
+10. Renaming master to development branch.
+11. Created a Feature branch, edited the code push remote.
+12. Rasied PR and added approvers and merged after approval, delete branch.
+13. Change branch to development and perform git pull to download updated code.
+14. terraform destroy -target random_password.password3

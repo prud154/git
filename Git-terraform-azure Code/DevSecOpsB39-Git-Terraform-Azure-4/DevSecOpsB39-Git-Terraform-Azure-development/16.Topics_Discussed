@@ -1,0 +1,66 @@
+0. Understanding Providers like Azure, AWS, Mongo
+1. Declaring Variables
+2. Implicit Dependency
+3. variables vs tfvars files
+4. Passing variables as CLI Arguments.
+5. Understanding statefile.
+6. Random Password Generator.
+7. Variable Presendence.
+    Environment variables, if present.
+    The terraform.tfvars file, if present.
+    The terraform.tfvars.json file, if present.
+    Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
+    Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
+
+8. Terraform state related commands
+   terraform state list
+
+9. Moving statefile to central location - Azure Storage Account.
+10. Renaming master to development branch.
+11. Created a Feature branch, edited the code push remote.
+12. Rasied PR and added approvers and merged after approval, delete branch.
+13. Change branch to development and perform git pull to download updated code.
+14. terraform destroy -target random_password.password3
+
+# Class 3
+14. Linux User Git Repo Access, Git Pull vs Git Fetch
+    git log --oneline
+    git fetch origin development [ Better use git pull then fetch & merge ]
+    git merge origin development [ Better use git pull then fetch & merge ]
+    git pull origin development 
+    root@ip-10-40-1-132:~/TerraformAzure# cat .git/refs/heads/development
+    d6109d818c64c06aa00d534407a49262731a147d
+    root@ip-10-40-1-132:~/TerraformAzure# cat .git/refs/remotes/origin/development
+    d6109d818c64c06aa00d534407a49262731a147d
+15. Terraform explicit Dependency using depends_on
+16. Git Conflicts
+17. Resolving git Conflicts.
+18. Creating a Azure Keyvault for Storing Secrets.
+19. Renaming Terraform Resource using terraform state mv <old_resource> <new_resource>
+20. Removing resource from statefile using terraform state rm <resource_name>
+    Manually moving KV to a diff RG to avoid deletion during terraform destroy.
+21. How Terraform State Locking Works when using Azure Storage Account as backend?
+22. Terraform Data Sources for accessing resources which are not part of terraform state.
+    - Create passwords in existing Keyvault.
+    - Create DNS Records in existing DNS Zone.
+23. git interative rebase.
+
+# Class 4:
+24. Git Reset - hard,soft,mixed = For deleting range of commits.
+25. Git Revert
+26. Force Git Push
+27. Git Reflog and restore deleted branches.
+28. git clone -b <branch_name> --single-branch 
+29. Git Stash
+30. Git Merge Local
+31. Git Cherry-Pick
+32. Git Merge(NonDestructive) & Rebase(The golden rule of git rebase is to never use it on public branches).
+33. Git hooks - Pre-Commit and Post-Commit
+34. Git Secrets to scan secrets using pre-commit hook.
+
+Class 5:
+35. Creating GitHub Actions Pipeline with Terraform & Azure.
+
+
+
+
